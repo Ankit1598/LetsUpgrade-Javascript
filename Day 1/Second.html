@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<h1>Write the difference between var, let and const with code examples.</h1>
+	
+	<p>*Press on the names to see the output in the console</p>
+
+	<p><b onclick = func_var()>var</b> declarations are globally scoped or function scoped while <b onclick = func_let()>let</b> and <b onclick = func_const()>const</b> are block scoped. <b onclick = func_var()>var</b> variables can be updated and re-declared within its scope; <b onclick = func_let()>let</b> variables can be updated but not re-declared; <b onclick = func_const()>const</b> variables can neither be updated nor re-declared. They are all hoisted to the top of their scope.</p>
+
+	<script type="text/javascript">
+		function func_var(){
+			console.group('var'); 
+				var a =10;
+				console.log(a);  // output 10
+				if(true){
+
+					var a=20;
+					console.log(a); // output 20
+				}
+				console.log(a);  // output 20
+			console.groupEnd('var');
+		}
+		function func_let(){
+			console.group('let'); 
+				let a =10;
+				console.log(a);  // output 10
+				if(true){
+					let a=20;
+				}
+				console.log(a); // output 20
+			console.groupEnd('let');
+		}
+		function func_const(){
+			console.group('const'); 
+				const MY_VARIABLE =10;
+				console.log(MY_VARIABLE);  //output 10
+				MY_VARIABLE =20;           //throws type error
+				console.log(MY_VARIABLE); 
+				console.log(a);  // output 20
+			console.groupEnd('const');
+		}
+	</script>
+</body>
+</html>

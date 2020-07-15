@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3</title>
+</head>
+<body>
+	<h1>Write a brief intro on available data types in Javascript.</h1>
+
+	<p>*Press on the names to see the output in the console</p>
+
+	<p><big><b onclick = show_String()>The String Data Type:</b></big> The string data type is used to represent textual data (i.e. sequences of characters).</p>
+
+	<p><big><b onclick = show_Number()>The Number Data Type:</b></big> The number data type is used to represent positive or negative numbers with or without decimal place, or numbers written using exponential notation e.g. 1.5e-4 (equivalent to 1.5x10<sup>-4</sup>).</p>
+
+	<p><big><b onclick = show_Boolean()>The Boolean Data Type:</b></big> The Boolean data type can hold only two values: true or false</p>
+
+	<p><big><b onclick = show_Undefined()>The Undefined Data Type:</b></big> The undefined data type can only have one value-the special value undefined.</p>
+
+	<p><big><b onclick = show_Null()>The Null Data Type:</b></big> This is another special data type that can have only one value-the null value.</p>
+
+	<p><big><b onclick = show_Object()>The Object Data Type:</b></big> The object is a complex data type that allows you to store collections of data. An object contains properties, defined as a key-value pair.</p>
+
+	<p><big><b onclick = show_Array()>The Array Data Type:</b></big> An array is a type of object used for storing multiple values in single variable.</p>
+
+	<p><big><b onclick = show_Function()>The Function Data Type:</b></big> The function is callable object that executes a block of code.</p>
+
+	<script type="text/javascript">
+		function show_String(){
+			var a = 'Hi String!';
+			console.log(a, ' : ', typeof(a));
+		}
+		function show_Number(){
+			var a = 25;
+			var b = 80.5;
+			var c = 4.25e+6;
+			var d = 4.25e-6;
+			var e = 1 / 0;
+			var f = Math.sqrt(-3);
+			console.log(a, ' : ', typeof(a), '\n', b, ' : ', typeof(b), '\n', c, ' : ', typeof(c), '\n', d, ' : ', typeof(d), '\n', e, ' : ', typeof(e), '\n', f, ' : ', typeof(f));
+		}
+		function show_Boolean(){
+			var isBool = true;
+			console.log(isBool, ' : ', typeof(isBool));
+		}
+		function show_Undefined(){
+			var a;
+			var b = "Hello Javascript!";
+			console.log(a, ' : ', typeof(a), '\n', b, ' : ', typeof(b));
+		}
+		function show_Null(){
+			var a = null;
+			console.log(a, ' : ', typeof(a));
+		}
+		function show_Object(){
+			var person = {"name": "Tony", "surname": "Stark", "age": "36"};
+			console.log(person, ' : ', typeof(person));
+		}
+		function show_Array(){
+			var colors = ["Red", "Yellow", "Green", "Orange"];
+			console.log(colors, ' : ', typeof(colors));
+		}
+		function show_Function(){
+			var greeting = function(){ 
+			    return "Hello World!";
+			}
+			console.log(greeting, ' : ', typeof(greeting));
+		}
+	</script>
+</body>
+</html>

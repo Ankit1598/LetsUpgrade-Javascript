@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 1</title>
+</head>
+<body>
+	<h1>Explore and explain the various methods in console functionExplain them Ex. console.log(), console.warn(), etc.</h1>
+	
+	<p>*Press on the names to see the output in the console</p>
+
+	<p><big><b onclick = show_log()>console.log():</b></big> Mainly used to log(print) the output to the console.</p>
+
+	<p><big><b onclick = show_error()>console.error():</b></big> Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color.</p>
+
+	<p><big><b onclick = show_warn()>console.warn():</b></big> Used to log warning message to the console. By default the warning message will be highlighted with yellow color.</p>
+
+	<p><big><b onclick = show_clear()>console.clear():</b></big> Used to clear the console</p>
+
+	<p><big><b onclick = show_time_timeEnd()>console.time() and console.timeEnd():</b></big> Whenever we want to know the amount of time spend by a block or a function, we can make use of the time() and timeEnd() methods provided by the javascript console object. They take a label which must be same, and the code inside can be anything( function, object, simple console).</p>
+
+	<p><big><b onclick = show_table()>console.table():</b></big> This method allows us to generate a table inside a console. The input must be an array or an object which will be shown as a table.</p>
+
+	<p><big><b onclick = show_count()>console.count():</b></big> This method is used to count the number that the function hit by this counting method.</p>
+
+	<p><big><b onclick = show_group_groupEnd()>console.group() and console.groupEnd():</b></big> group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented. Just like the time() and the timeEnd() they also accepts label, again of same value.</p>
+
+	<p><big><b onclick = show_clog()>Custom Console Logs:</b></big> User can add Styling to the console logs in order to make logs Custom . The Syntax for it is to add the css styling as a parameter to the logs which will replace %c in the logs</p>
+
+
+	<script type="text/javascript">
+		function show_log(){console.log('This is a log');}
+		function show_error(){console.error('This is a simple error');}
+		function show_warn(){console.warn('This is a warning.');}
+		function show_clear(){console.clear();}
+		function show_time_timeEnd(){
+			console.time('abc');
+			let fun =  function(){ 
+			    console.log('fun is running'); 
+			} 
+			let fun2 = function(){ 
+			    console.log('fun2 is running..'); 
+			} 
+			fun(); // calling fun(); 
+			fun2(); // calling fun2(); 
+			console.timeEnd('abc');
+		}
+		function show_table(){console.table({'a':1, 'b':2});}
+		function show_count(){
+			for(let i=0;i<5;i++){ 
+		    	console.count(i);
+		    }
+		}
+		function show_group_groupEnd(){
+			console.group('Group1'); 
+				console.warn('This is a simple error!'); 
+				console.error('This is a warning.'); 
+				console.log('This is a log'); 
+			console.groupEnd('Group1'); 
+			console.log('This is a log');
+		}
+		function show_clog(){
+			const spacing = '10px'; 
+			const styles =  
+				`padding: ${spacing}; background-color: white; color: green; font-style:  
+				italic; border: 1px solid black; font-size: 2em;`; 
+			console.log('%cCustom Log', styles); 
+		}
+	</script>
+</body>
+</html>
