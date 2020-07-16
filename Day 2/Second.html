@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<h1>Explain with examples the remaining methods of String and Array</h1>
+	
+	<p>*Output in the console</p>
+
+	<script type="text/javascript">
+		console.group('String Methods'); 
+			var txt = '      JavaScript String Methods      '
+			console.log('Length :', txt.length);
+			console.log('indexOf String :', txt.indexOf('String'));
+			console.log('search String :', txt.search('String'));
+			console.log('slice :', txt.slice(7, 13));
+			console.log('substring :', txt.substr(7, 6));
+			console.log('replace :', txt.replace("JavaScript", "Javascript"));
+			console.log('toUpperCase :', txt.toUpperCase());
+			console.log('toLowerCase :', txt.toLowerCase());
+			console.log('concat :', txt.concat(txt, "Hello World"));
+			console.log('trim :', txt.trim());
+			console.log('charAt :', txt.charAt(6));
+			console.log('charCodeAt :', txt.charCodeAt(6));
+			console.log('split :', txt.split(" "));
+		console.groupEnd('String Methods'); 
+
+		console.group('Array Methods'); 
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			console.log('toString :', fruits.toString());
+			console.log('join :', fruits.join(" * "));
+			console.log('pop :', fruits.pop());
+			console.log('push :', fruits.push("Kiwi"));
+			console.log('shift :', fruits.shift());
+			console.log('unshift :', fruits.unshift("Lemon"));
+			console.log('append :', fruits[fruits.length] = "Kiwi");
+			console.log('splice :', fruits.splice(2, 0, "Lemon", "Kiwi"));
+			console.log('slice :', fruits.slice(1));
+			console.log('sort :', fruits.sort());
+			console.log('reverse :', fruits.reverse());
+		console.groupEnd('Array Methods'); 
+	</script>
+</body>
+</html>
