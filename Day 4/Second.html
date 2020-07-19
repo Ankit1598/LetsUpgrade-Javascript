@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<h1>Destructure the following object</h1>
+	<p>
+		const student = {<br>
+			name: 'Helsinki',<br>
+			age: 24,<br>
+			projects: {<br>
+			diceGame: 'Two player dice game using JavaScript'<br>
+
+		}<br>
+		}
+	</p>
+	
+	<p>*Output in the console</p>
+
+	<script type="text/javascript">
+		const student = {
+			name: 'Helsinki',
+			age: 24,
+			projects: {
+			diceGame: 'Two player dice game using JavaScript'
+
+			}
+		}
+
+		const { name, age, projects: { diceGame } } = student;
+		console.log(`Name : ${name}\nAge : ${age}\nProjects = ${diceGame}`)
+	</script>
+</body>
+</html>

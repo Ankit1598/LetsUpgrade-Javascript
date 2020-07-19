@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 6</title>
+</head>
+<body>
+	<h1>Rewrite the function using '?' or '||'<br>
+		Write a loop which prompts for a number greater than 100. If the visitor enters another number – ask them to input again.<br>
+		The loop must ask for a number until either the visitor enters a number greater than 100 or cancels theinput/enters an empty line.<br>
+		Here we can assume that the visitor only inputs numbers. There’s no need to implement a special handling for a non-numeric input in this task.<br></h1>
+	
+	<p>*Output in the console</p>
+
+	<script type="text/javascript">
+		while(true){
+			let number=prompt("Enter the number above 100");
+			if (number > 100){
+				console.log(`Entered number is ${number}`);
+				break;
+    		}
+			else
+				console.log("Entered number is not valid");
+			continue;
+  		}
+	</script>
+</body>
+</html>
