@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 2</title>
+</head>
+<body>
+	<h1>Create a Class User with properties as name, age & email. <br>
+		He can login and logout <br>
+		Create another class Moderator which has all the features of User, plus additional functionality to Addcoins and remove coins. <br>
+		Create one more class Admin which has all the features of Moderator plus additional features like add aCourse and delete a particular course for a user
+	</h1>
+	
+	<p>*Output in the console</p>
+
+	<script type="text/javascript">
+		class User {
+			constructor(name, age, email) {
+				this.name = name;
+				this.age = age;
+				this.email = email;
+				this.luCoins = 0;
+				this.courses = [];
+			}
+
+			login() {
+				console.log(`${this.name} has logged in`);
+				return this;
+			}
+			logout() {
+				console.log(`${this.name} has logged out`);
+				return this;
+			}
+
+		}
+
+		class Moderator extends User {
+			constructor(name, age, email) {
+				super(name, age, email);
+			}
+			addCoins(user) {
+				user.luCoins++;
+				console.log(`${user.name} has ${user.luCoins} coins`);
+				return this;
+			}
+
+			removeCoins(user) {
+				user.luCoins--;
+				console.log(`${user.name} has ${user.luCoins} coins`);
+				return this;
+			}
+		}
+
+		class Admin extends Moderator {
+			constructor(name, age, email) {
+				super(name, age, email);
+			}
+			addCourse(user, course) {
+				user.courses.push(course);
+				console.log(`Course ${course} added to user ${user.name}`);
+			}
+
+			deleteCourse(user, course) {
+				user.courses.splice(user.courses.indexOf(course), 1);
+				console.log(`Course ${course} removed to user ${user.name}`);
+			}
+		}
+
+		let user1 = new User('Ram',25,'ram@gmail.com');
+		let user2 = new User('Ramesh',24,'ramesh@gmail.com');
+		let mod = new Moderator('James',23,'james@gmail.com','Moderator');
+		let admin = new Admin('Rony',24,'rony@gmail.com');
+		let users = [user1,user2,mod,admin];
+
+		user1.login().logout();
+
+		mod.login().addCoins(user1,5);
+		mod.removeCoins(user1,3);
+		mod.logout();
+
+		admin.login();
+		admin.addCourse(user1,'Javascript');
+		admin.addCourse(user1,'Python');
+		admin.addCourse(user1,'perl');
+		admin.deleteCourse(user1);
+		
+		users.forEach(element => {
+			console.log(element);
+		});
+		admin.logout();
+	</script>
+</body>
+</html>
