@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 1</title>
+</head>
+<body>
+	<h1>Write a program that will iterate over an array of colors and change the background of the page after 5 seconds.</h1>
+	
+	<script type="text/javascript">
+		setInterval(
+			function () {
+				var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+				document.body.style.backgroundColor = "#" + randomColor;
+			}, 5000);
+	</script>
+</body>
+</html>

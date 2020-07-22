@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3</title>
+	<style>
+		.dark-mode {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1>Make a webpage that will ask the name of the user. Then will display a welcome message on thewebpage. Also the webpage should also have a clock. <br>
+		Using the toggle method of classList add a dark mode feature to the website	</h1>
+	
+	<div id="text">
+		<h1 id="title"></h1>
+		<h4 id="time"></h4>
+	</div> 
+	<button onclick="darkmode()">Dark/White Mode</button> 
+
+	<script type="text/javascript">
+		const name = prompt("Enter your name");
+
+		title.innerText += `Welcome ${name}`;
+
+		const ctime = document.getElementById('time');
+		function clock(){
+			let date = new Date();
+			let time = date.toLocaleTimeString();
+			ctime.innerText = time;
+		}
+		setInterval(clock,1000);
+
+		function darkmode() {
+			var element = document.body;
+			element.classList.toggle("dark-mode");
+		}
+
+	</script>
+</body>
+</html>
